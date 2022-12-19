@@ -1,0 +1,8 @@
+---
+- hosts: windowsServer
+  tasks:
+
+  - name: StartSite
+    win_shell: |
+        Import-Module WebAdministration
+        Start-WebSite 'Default Web Site'
